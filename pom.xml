@@ -62,7 +62,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <hawtjni-version>1.14</hawtjni-version>
+        <hawtjni-version>1.9</hawtjni-version>
         
         <!-- The tests connect to the vagrant box provided by glusterfs-java-filesystem -->
         <!-- so that needs to be running in order for the tests to run. -->

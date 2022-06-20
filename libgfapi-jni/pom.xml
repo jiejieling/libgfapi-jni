@@ -67,10 +67,17 @@
         <resources>
             <resource>
                 <directory>${project.basedir}/src/main/resources</directory>
-                <filtering>true</filtering>
+                <filtering>false</filtering>
                 <includes>
-                    <include>**/*</include>
+                    <include>META-INF/**</include>
                 </includes>
+            </resource>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+                <filtering>true</filtering>
+                <excludes>
+                    <exclude>META-INF/**</exclude>
+                </excludes>
             </resource>
         </resources>
         <plugins>
