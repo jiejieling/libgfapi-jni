@@ -46,7 +46,7 @@
 
     <groupId>com.peircean.libgfapi-jni</groupId>
     <artifactId>libgfapi-project</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <packaging>pom</packaging>
 
     <name>${project.artifactId}</name>
@@ -62,13 +62,13 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <hawtjni-version>1.9</hawtjni-version>
+        <hawtjni-version>1.14</hawtjni-version>
         
         <!-- The tests connect to the vagrant box provided by glusterfs-java-filesystem -->
         <!-- so that needs to be running in order for the tests to run. -->
-        <glusterfs.server>172.31.31.31</glusterfs.server>
-        <glusterfs.volume>foo</glusterfs.volume>
-        <client.logfile>/tmp/glfsjni.log</client.logfile>
+        <glusterfs.server>ebj-test-01</glusterfs.server>
+        <glusterfs.volume>test4</glusterfs.volume>
+        <client.logfile>/dev/null</client.logfile>
     </properties>
 
     <modules>
@@ -76,13 +76,6 @@
     </modules>
 
     <inceptionYear>2013</inceptionYear>
-
-    <scm>
-        <url>https://github.com/semiosis/libgfapi-jni</url>
-        <connection>scm:git:https://github.com/semiosis/libgfapi-jni.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/semiosis/libgfapi-jni.git</developerConnection>
-        <tag>HEAD</tag>
-    </scm>
 
     <developers>
         <developer>
@@ -113,7 +106,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>0.11.8</version>
+            <version>1.16.10</version>
             <scope>provided</scope>
         </dependency>
 
@@ -252,7 +245,6 @@
         <profile>
             <id>full</id>
             <modules>
-                <module>libgfapi-linux64</module>
                 <module>libgfapi-all</module>
             </modules>
         </profile>
@@ -260,7 +252,6 @@
         <profile>
             <id>release</id>
             <modules>
-                <module>libgfapi-linux64</module>
                 <module>libgfapi-all</module>
             </modules>
             <build>
@@ -295,12 +286,6 @@
             <id>all</id>
             <modules>
                 <module>libgfapi-all</module>
-            </modules>
-        </profile>
-        <profile>
-            <id>linux64</id>
-            <modules>
-                <module>libgfapi-linux64</module>
             </modules>
         </profile>
 

@@ -41,11 +41,11 @@
     <parent>
         <groupId>com.peircean.libgfapi-jni</groupId>
         <artifactId>libgfapi-project</artifactId>
-        <version>1.0.4</version>
+        <version>1.0.5</version>
     </parent>
 
     <artifactId>libgfapi-all</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <packaging>bundle</packaging>
 
     <name>${project.artifactId}</name>
@@ -55,15 +55,15 @@
         <dependency>
             <groupId>com.peircean.libgfapi-jni</groupId>
             <artifactId>libgfapi-jni</artifactId>
-            <version>1.0.4</version>
+            <version>1.0.5</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>com.peircean.libgfapi-jni</groupId>
-            <artifactId>libgfapi-linux64</artifactId>
-            <version>1.0.4</version>
-            <scope>provided</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.peircean.libgfapi-jni</groupId>-->
+<!--            <artifactId>libgfapi-linux64</artifactId>-->
+<!--            <version>1.0.4</version>-->
+<!--            <scope>provided</scope>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>
@@ -90,7 +90,8 @@
                         </Embed-Dependency>
                         <Embed-Transitive>true</Embed-Transitive>
                         <Bundle-NativeCode>
-                            META-INF/native/linux64/liblibgfapi-jni.so;osname=Linux;processor=x86-64
+                            META-INF/native/liblibgfapi-jni.dylib;osname=MacOSX;processor=x86;processor=x86-64,
+                            META-INF/native/liblibgfapi-jni.so;osname=Linux;processor=x86;processor=x86-64
                         </Bundle-NativeCode>
                     </instructions>
                 </configuration>
@@ -106,7 +107,7 @@
                 <dependency>
                     <groupId>com.peircean.libgfapi-jni</groupId>
                     <artifactId>libgfapi-jni</artifactId>
-                    <version>1.0.4-SNAPSHOT</version>
+                    <version>1.0.5</version>
                     <classifier>sources</classifier>
                     <optional>true</optional>
                 </dependency>

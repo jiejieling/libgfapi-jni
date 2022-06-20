@@ -250,4 +250,14 @@ public class GLFS {
             @JniArg(cast = "char *", flags = NO_IN) byte[] buf,
             @JniArg(cast = "size_t") long bufsiz
     );
+
+    @JniMethod
+    public static final native int glfs_setfsuid(
+            int uid
+    );
+
+    @JniMethod
+    public static final native int glfs_setfsgid(
+            int gid
+    );
 }
