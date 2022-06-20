@@ -62,7 +62,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <hawtjni-version>1.9</hawtjni-version>
+        <hawtjni-version>1.14</hawtjni-version>
         
         <!-- The tests connect to the vagrant box provided by glusterfs-java-filesystem -->
         <!-- so that needs to be running in order for the tests to run. -->
@@ -91,6 +91,12 @@
             <email>me@louiszuckerman.com</email>
             <url>http://about.me/louiszuckerman</url>
             <timezone>GMT-5</timezone>
+        </developer>
+        <developer>
+            <id>jiejieling</id>
+            <name>Jie Ling</name>
+            <email>jiejie.ling@qq.com</email>
+            <timezone>GMT-8</timezone>
         </developer>
     </developers>
 

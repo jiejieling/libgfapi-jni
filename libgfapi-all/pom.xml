@@ -90,7 +90,7 @@
                         </Embed-Dependency>
                         <Embed-Transitive>true</Embed-Transitive>
                         <Bundle-NativeCode>
-                            META-INF/native/osx64/liblibgfapi-jni.dylib;osname=MacOSX;processor=x86;processor=x86-64,
+                            META-INF/native/osx64/liblibgfapi-jni.jnilib;osname=MacOSX;processor=x86;processor=x86-64,
                             META-INF/native/linux64/liblibgfapi-jni.so;osname=Linux;processor=x86;processor=x86-64
                         </Bundle-NativeCode>
                     </instructions>
